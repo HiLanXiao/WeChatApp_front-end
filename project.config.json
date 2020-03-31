@@ -1,0 +1,105 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"enhance": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.9.4",
+	"appid": "wx6868a4ed73d38a71",
+	"projectname": "%E7%BB%BC%E5%90%88%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1III",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "pages/information/information",
+					"pathName": "pages/information/information",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "contentPackage/packageForInfo/personalInfo/personalInfo",
+					"pathName": "contentPackage/packageForInfo/personalInfo/personalInfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "contentPackage/packageForInfo/schoolInfo/schoolInfo",
+					"pathName": "contentPackage/packageForInfo/schoolInfo/schoolInfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/square/square",
+					"pathName": "contentPackage/packageForSquare/comment/comment",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "contentPackage/packageForSquare/comment/comment",
+					"pathName": "contentPackage/packageForSquare/comment/comment",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "contentPackage/packageForInfo/resume/resume",
+					"pathName": "contentPackage/packageForInfo/resume/resume",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

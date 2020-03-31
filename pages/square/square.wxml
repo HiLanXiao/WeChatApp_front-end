@@ -1,0 +1,8 @@
+<!--pages/square/square.wxml-->
+<cu-custom bgColor="bg-gradual-blue light" isBack="{{false}}">
+  <view slot="content">广场</view>
+</cu-custom>
+<search-bar bind:searchDynamic="searchDynamic">
+</search-bar>
+<dynamic-card cards="{{cards}}" bind:cardSupportCountTap="cardSupportCountTap" bind:cardCommentCountTap="cardCommentCountTap" bind:viewProfile="viewProfile">
+</dynamic-card>

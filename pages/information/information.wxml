@@ -1,0 +1,36 @@
+<cu-custom bgColor="bg-gradual-blue light" isBack="{{false}}">
+  <view slot="content">个人主页</view>
+</cu-custom>
+
+<view class='UCenter-bg'>
+  <open-data type="userAvatarUrl" class='personalImage' mode='widthFix'></open-data>
+  <open-data type="userNickName" lang="zh_CN" class='text-xl'></open-data>
+  <image src='https://raw.githubusercontent.com/weilanwl/ColorUI/master/demo/images/wave.gif' mode='scaleToFill' class='gif-wave'></image>
+</view>
+<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg">
+  <view class="cu-item arrow">
+    <navigator class='content' url='/contentPackage/packageForInfo/personalInfo/personalInfo' hover-class='none'>
+      <image src='/icons/pages/personalInfo.png' class='icons' mode='aspectFit'></image>
+      <text class='text-grey'>个人信息</text>
+    </navigator>
+  </view>
+  <view class="cu-item arrow">
+    <navigator class='content' url='/contentPackage/packageForInfo/schoolInfo/schoolInfo' hover-class='none'>
+      <image src='/icons/pages/schoolInfo.png' class='icons' mode='aspectFit'></image>
+      <text class='text-grey'>学校信息</text>
+    </navigator>
+  </view>
+  <view class="cu-item arrow">
+    <navigator class='content' url='/contentPackage/packageForInfo/personalDynamic/personalDynamic' hover-class='none'>
+      <image src='/icons/pages/personalDynamic.png' class='icons' mode='aspectFit'></image>
+      <text class='text-grey'>个人动态</text>
+    </navigator>
+  </view>
+  <view class="cu-item arrow">
+    <navigator class='content' url='/contentPackage/packageForInfo/resume/resume' hover-class='none'>
+      <image src='/icons/pages/resume.png' class='icons' mode='aspectFit'></image>
+      <text class='text-grey'>个人简历</text>
+    </navigator>
+  </view>
+</view>
+<view class='cu-tabbar-height'></view>

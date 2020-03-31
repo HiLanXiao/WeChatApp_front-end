@@ -1,0 +1,41 @@
+## 综设III  前端开发日志
+
+### 19/12/22
+
+- **确定使用组件库**：ColorUI
+- **项目框架确定**：
+  - 两个tabBar
+    - square
+    - information
+  - 项目分包：
+    - packageForSqure
+    - *广场部分分包*
+      - dynamicDetail
+        - *动态详情页面*
+      - comment
+        - *评论页面*
+      - writeDynamic
+        - *发帖页面*
+      - selectTheme
+        - *选择主题页面*
+    - packageForInfo
+    - *我的部分分包*
+      - personalInfo
+        - *个人信息页面*
+      - schoolInfo
+        - *学校信息页面*
+      - personalDynamic
+        - *个人动态页面*
+      - resume
+        - *个人简历页面*
+- **编写工具类**
+  - *请求函数Promise化*
+  - *节流函数*
+  - *防抖函数*
+  - *检查登录函数*
+  - *this.setData收集函数*
+- **引入ColorUI**
+  - custom组件
+  - 三个wxss文件
+  - onLaunch里面获得高度
+- **完成了广场的界面开发，和动态、搜索栏组件化**

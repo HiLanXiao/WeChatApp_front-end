@@ -1,0 +1,37 @@
+<cu-custom bgColor="bg-gradual-blue light" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">学校信息</view>
+</cu-custom>
+<form>
+  <view class="cu-form-group margin-top">
+    <view class="title">学校：</view>
+    <input value="{{schoolInfo.university}}" bindblur='blurUniversity' placeholder='你的学校'>{{schoolInfo.university ? schoolInfo.university : ""}}</input>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">所属学院：</view>
+    <input value="{{schoolInfo.college}}" bindblur='blurCollege' placeholder='你所在的学院'>{{schoolInfo.college ? schoolInfo.college : ""}}</input>
+  </view>
+  <view class="cu-form-group ">
+    <view class="title">我的专业：</view>
+    <input value="{{schoolInfo.major}}" bindblur="blurMajor" placeholder='你的专业'>{{schoolInfo.major ? schoolInfo.major : ""}}</input>
+  </view>
+  <view class="cu-form-group margin-top">
+    <view class="title">毕业年份</view>
+    <picker bindchange="gradePickerChange" value="{{schoolInfo.grade}}" range="{{pickerGrade}}">
+      <view class="picker">
+        {{schoolInfo.gradeIndex ? pickerGrade[schoolInfo.gradeIndex - 1] : '年份'}}
+      </view>
+    </picker>
+  </view>
+  <view class="cu-form-group margin-top">
+    <view class="title">学位</view>
+    <picker bindchange="degreePickerChange" value="{{schoolInfo.degreeIndex}}" range="{{pickerDegree}}">
+      <view class="picker">
+        {{schoolInfo.degreeIndex ? pickerDegree[schoolInfo.degreeIndex - 1] : '学位'}}
+      </view>
+    </picker>
+  </view>
+</form>
+<view class="cu-bar btn-group margin-top">
+  <button class="cu-btn bg-green shadow-blur" bindtap="saveInfo">保存</button>
+</view>

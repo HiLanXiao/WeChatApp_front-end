@@ -1,0 +1,12 @@
+<view class="information bg-white">
+  <view class="head">
+    <view class="text-l margin-top-lg bg-white margin-right-sm">
+      <text space="nbsp" class="text-grey">{{head}}</text>
+    </view>
+  </view>
+  <view class="content">
+    <view class="text-l margin-top-lg bg-white">
+      <text space="nbsp" class="text-grey margin-left-xl margin-right-sm">{{content}}</text>
+    </view>
+  </view>
+</view>

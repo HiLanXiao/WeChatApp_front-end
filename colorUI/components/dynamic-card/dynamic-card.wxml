@@ -1,0 +1,62 @@
+<view class="gap"></view>
+<view class="cu-card dynamic" wx:for="{{cards}}" wx:key="cardId" wx:for-item="itemOne">
+  <view class="cu-item shadow card">
+    <view class="cu-list menu-avatar">
+      <view class="cu-item">
+        <view catchtap="imageTap" class="cu-avatar round lg" style="background-image:url({{itemOne.imageUrl}});"></view>
+        <view class="content flex-sub">
+          <view>{{itemOne.nickName}}</view>
+          <view class="text-gray text-sm flex justify-between">
+            {{itemOne.createdAt}}
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="text-xl padding">
+      <text class="text-black text-bold">{{itemOne.cardTitle}}</text>
+    </view>
+    <view class="text-content">
+      {{itemOne.cardContent}}
+    </view>
+    <view class="text-gray text-sm text-right padding">
+      <view style="display:inline-block" mark:cardId="{{itemOne.cardId}}" catchtap="cardSupportCountTap">
+        <text class="cuIcon-appreciatefill margin-right-xs {{itemOne.cardSupportWhether ? 'text-red' : ''}}"></text>
+        <text class="margin-right-xs">{{itemOne.cardSupportCount}}</text>
+      </view>
+      <view style="display:inline-block" mark:cardId="{{itemOne.cardId}}" catchtap="cardCommentCountTap">
+        <text class="cuIcon-messagefill margin-right-xs"></text>
+        <text class="margin-right-xs">{{itemOne.cardCommentCount}}</text>
+      </view>
+    </view>
+    <view class="cu-list menu-avatar comment solids-top" wx:if="{{itemOne.comments}}">
+      <view class="cu-item" wx:key="commentId" wx:for="{{itemOne.comments}}" wx:for-item="itemTwo">
+        <view catchtap="viewProfile" class="cu-avatar round" style="background-image:url({{itemTwo.imageUrl}});"></view>
+        <view class="content">
+          <view class="text-grey">{{itemTwo.nickName}}</view>
+          <view class="text-gray text-content text-df">
+            {{itemTwo.content}}
+          </view>
+          <view class="bg-grey padding-sm radius margin-top-sm  text-sm">
+            <view class="flex">
+              <view>{{itemTwo.replyNickName}}：</view>
+              <view class="flex-sub">{{itemTwo.replyContent}}</view>
+            </view>
+          </view>
+          <view class="margin-top-sm flex justify-between">
+            <view class="text-gray text-df">{{itemTwo.replyTime}}</view>
+            <view class="text-gray">
+              <view style="display:inline-block" mark:commentId="{{itemTwo.commentId}}" catchtap="commentSupportCountTap">
+                <text class="cuIcon-appreciatefill margin-right-xs {{itemTwo.commentSupportWhether ? 'text-red' : ''}}"></text>
+                <text class="margin-right-xs">{{itemTwo.commentSupportCount}}</text>
+              </view>
+              <view style="display:inline-block" mark:commentId="{{itemTwo.commentId}}" catchtap="commentCommentCountTap">
+                <text class="cuIcon-messagefill margin-right-xs"></text>
+                <text class="margin-right-xs">{{itemTwo.commentCommentCount}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

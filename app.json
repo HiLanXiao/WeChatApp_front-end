@@ -1,0 +1,62 @@
+{
+  "pages": [
+    "pages/square/square",
+    "pages/information/information"
+  ],
+  "subpackages": [
+    {
+      "root": "contentPackage/packageForSquare",
+      "name": "packageForSquare",
+      "pages": [
+        "dynamicDetail/dynamicDetail",
+        "comment/comment",
+        "writeDynamic/writeDynamic",
+        "selectTheme/selectTheme",
+        "searchResult/searchResult"
+      ]
+    },
+    {
+      "root": "contentPackage/packageForInfo",
+      "name": "packageForInfo",
+      "pages": [
+        "personalInfo/personalInfo",
+        "schoolInfo/schoolInfo",
+        "personalDynamic/personalDynamic",
+        "resume/resume"
+      ]
+    }
+  ],
+  "window": {
+    "navigationStyle": "custom"
+  },
+  "usingComponents": {
+    "cu-custom": "/colorUI/components/cu-custom/cu-custom",
+    "dynamic-card": "/colorUI/components/dynamic-card/dynamic-card",
+    "search-bar": "/colorUI/components/search-bar/search-bar",
+    "information-part": "/colorUI/components/information-part/information-part",
+    "head-part": "/colorUI/components/head-part/head-part"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "text": "广场",
+        "pagePath": "pages/square/square",
+        "iconPath": "/icons/pages/square.png",
+        "selectedIconPath": "/icons/pages/squareSelected.png",
+        "color": "#333333",
+        "selectedColor": "#0f889f"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/information/information",
+        "iconPath": "/icons/pages/mine.png",
+        "selectedIconPath": "/icons/pages/mineSelected.png",
+        "color": "#333333",
+        "selectedColor": "#0f889f"
+      }
+    ],
+    "backgroundColor": "1e8e8",
+    "selectedColor": "#666633"
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,32 @@
+<view class="bg-white">
+<cu-custom bgColor="bg-gradual-blue light" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">张澜潇</view>
+</cu-custom>
+
+<head-part title="个人信息"> </head-part>
+<information-part head="姓名" content="{{personalInfoData.name}}"></information-part>
+<information-part head="手机号" content="{{personalInfoData.telephone}}"></information-part>
+<information-part head="邮箱" content="{{personalInfoData.email}}"></information-part>
+<information-part head="个人网址" content="{{personalInfoData.personalSite}}"></information-part>
+<information-part head="github账号" content="{{personalInfoData.personalGit}}"></information-part>
+<information-part head="个人介绍" content="{{personalInfoData.introduction}}"></information-part>
+
+<head-part title="学校信息"> </head-part>
+<information-part head="学校" content="{{schoolInfoData.university}}"></information-part>
+<information-part head="学院" content="{{schoolInfoData.college}}"></information-part>
+<information-part head="专业" content="{{schoolInfoData.major}}"></information-part>
+<information-part head="毕业年份" content="{{schoolInfoData.grade}}"></information-part>
+<information-part head="学位" content="{{schoolInfoData.degree}}"></information-part>
+
+<head-part title="实习经历"> </head-part>
+<information-part  head="{{practice[0].head}}" content="{{practice[0].content}}"></information-part>
+
+<head-part title="竞赛经历"> </head-part>
+<information-part  head="{{practice[1].head}}" content="{{practice[1].content}}"></information-part>
+
+<head-part title="组织经历"> </head-part>
+<information-part  head="{{practice[2].head}}" content="{{practice[2].content}}"></information-part>
+
+<view class="bg-white" style="height:50rpx;"></view>
+</view>

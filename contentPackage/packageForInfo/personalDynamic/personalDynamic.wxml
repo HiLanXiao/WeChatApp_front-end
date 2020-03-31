@@ -1,0 +1,6 @@
+<cu-custom bgColor="bg-gradual-blue light" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">个人动态</view>
+</cu-custom>
+<dynamic-card cards="{{cards}}" bind:cardSupportCountTap="cardSupportCountTap" bind:cardCommentCountTap="cardCommentCountTap">
+</dynamic-card>

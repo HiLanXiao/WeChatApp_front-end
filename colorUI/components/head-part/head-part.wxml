@@ -1,0 +1,5 @@
+<view class="cu-bar bg-white solid-bottom padding-top-lg">
+  <view class="action">
+    <text class="cuIcon-title text-blue"></text>{{title}}
+  </view>
+</view>

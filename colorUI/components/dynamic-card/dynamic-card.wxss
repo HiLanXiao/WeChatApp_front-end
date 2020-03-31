@@ -1,0 +1,9 @@
+/* colorUI/components/dynamic-card/dynamic-card.wxss */
+
+.gap {
+  margin-top: 5rpx;
+}
+
+.card {
+  margin: 5rpx !important;
+}

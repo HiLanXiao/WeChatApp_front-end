@@ -1,0 +1,36 @@
+<cu-custom bgColor="bg-gradual-blue light" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">个人信息</view>
+</cu-custom>
+<form>
+  <view class="cu-form-group margin-top">
+    <view class="title">姓名：</view>
+    <input value="{{personalInfo.name}}" bindblur='blurName' placeholder='你的姓名'>{{personalInfo.name ? personalInfo.name : ""}}</input>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">手机：</view>
+    <input value="{{personalInfo.telephone}}" bindblur='blurTelephone' placeholder='你的手机号'>{{personalInfo.telephone ? personalInfo.telephone : ""}}</input>
+  </view>
+  <view class="cu-form-group ">
+    <view class="title">邮箱：</view>
+    <input value="{{personalInfo.email}}" bindblur="blurEmail" placeholder='你的邮箱'>{{personalInfo.email ? personalInfo.email : ""}}</input>
+  </view>
+  <view class="cu-form-group ">
+    <view class="title">个人网址：</view>
+    <input value="{{personalInfo.personalSite}}" bindblur="blurPersonalSite" placeholder='你的个人网址'>{{personalInfo.personalSite ? personalInfo.personalSite : ""}}</input>
+  </view>
+  <view class="cu-form-group ">
+    <view class="title">github账号：</view>
+    <input value="{{personalInfo.personalGit}}" bindblur="blurPersonalGit" placeholder='你的github账号'>{{personalInfo.personalGit ? personalInfo.personalGit : ""}}</input>
+  </view>
+  <view class="cu-form-group  margin-top">
+    <view class="title">个人介绍</view>
+  </view>
+  <view class="cu-form-group">
+    <textarea placeholder="这个人懒死了，什么都没有写" maxlength="-1" disabled="{{modalName!=null}}" bindinput="blurIntroduction" value='{{personalInfo.introduction}}'>{{personalInfo.introduction ? personalInfo.introduction : ""}}</textarea>
+  </view>
+</form>
+
+<view class="cu-bar btn-group margin-top">
+  <button class="cu-btn bg-green shadow-blur round lg" bindtap='saveInfo'>保存</button>
+</view>
