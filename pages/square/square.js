@@ -19,47 +19,52 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: async function () {
-    await CheckLogin().catch(e => {
-      showErrToast(e.message)
-    })
-    let options = {
-        url: 'http://localhost:3000/square',
+  async onLoad() {
+    try {
+      await CheckLogin()
+      let options = {
+        url: 'http://localhost:3000/getCards',
         method: "GET",
         data: {
           sessionId: wx.getStorageSync('sessionId')
         }
-      },
-      that = this
-    Request(options).then(data => {
+      }
+      let data = await Request(options)
       MySetData({
         cards: data.payload
-      }, that)
-    }).catch(e => {
+      }, this)
+    } catch (e) {
       showErrToast(e.message)
-    })
+    }
   },
-  cardSupportCountTap(e) {
-    let that = this,
-      squareData = that.data.cards
-    for (let item in squareData) {
-      if (squareData[item].cardId === e.detail.cardId) {
-        if (!squareData[item].cardSupportWhether) {
-          squareData[item].cardSupportCount++
-          squareData[item].cardSupportWhether = true
-        } else {
-          squareData[item].cardSupportCount--
-          squareData[item].cardSupportWhether = false
+  async cardSupportCountTap(e) {
+    let cardId = e.detail.cardId,
+      options = {
+        url: 'http://localhost:3000/card/cardLike',
+        method: "POST",
+        data: {
+          cardId: cardId,
+          sessionId: wx.getStorageSync('sessionId')
         }
-        MySetData({
-          cards: squareData
-        }, that)
+      },
+      cards = this.data.cards
+    await Request(options).catch(e => {
+      showErrToast(e.message)
+      return
+    })
+    for (let card of cards) {
+      if (card.cardId === cardId) {
+        if (card.cardSupportWhether = !card.cardSupportWhether) {
+          card.cardSupportCount++
+        } else {
+          card.cardSupportCount--
+        }
       }
     }
   },
   cardCommentCountTap(e) {
     wx.navigateTo({
-      url: '/contentPackage/packageForSquare/comment/comment',
+      url: '/contentPackage/packageForSquare/comment/comment?cardId=' + e.detail.cardId,
     })
   },
   searchDynamic(e) {

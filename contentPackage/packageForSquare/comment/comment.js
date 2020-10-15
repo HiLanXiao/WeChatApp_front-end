@@ -1,6 +1,9 @@
 // contentPackage/packageForSqure/comment/comment.js
 import {
-  MySetData
+  CheckLogin,
+  Request,
+  MySetData,
+  showErrToast
 } from '../../../utils/util.js'
 
 import {
@@ -18,15 +21,24 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  async onLoad(Options) {
+    try {
+      await CheckLogin()
+      let options = {
+        url: "http://localhost:3000/card/comments",
+        method: "GET",
+        data: {
+          cardId: Options.cardId,
+          sessionId: wx.getStorageSync('sessionId')
+        }
+      }
+      let data = await Request(options)
+      MySetData({
+        cards: data.payload
+      }, this)
+    } catch (e) {
+      showErrToast(e.message)
+    }
   },
 
   commentSupportCountTap(e) {
